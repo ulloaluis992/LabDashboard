@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:smart_admin_dashboard/core/constants/color_constants.dart';
 import 'package:smart_admin_dashboard/core/init/provider_list.dart';
-import 'package:smart_admin_dashboard/providers/user_provider.dart';
 import 'package:smart_admin_dashboard/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,8 +26,6 @@ Widget build(BuildContext context) {
   return MultiProvider(
 
       providers: [...ApplicationProvider.instance.dependItems,
-
-       ChangeNotifierProvider(create: (_) => UserProvider()),
        ],
 
       child: FutureBuilder(

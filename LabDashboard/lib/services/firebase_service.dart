@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:smart_admin_dashboard/entities/user_model.dart';
+import 'package:smart_admin_dashboard/models/user_model.dart';
 
 class UserService {
   Future<List<UserModel>> getUsers() async {
@@ -29,7 +29,6 @@ class UserService {
         .where("password", isEqualTo: password)
         .get();
     String idDoc = querySnapshot.docs.first.id;
-    var data = querySnapshot.docs.first.data();
     if (idDoc.isEmpty) {
       return userEmpty();
     } else {

@@ -1,7 +1,7 @@
 import 'package:smart_admin_dashboard/core/constants/color_constants.dart';
 import 'package:colorize_text_avatar/colorize_text_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_admin_dashboard/entities/user_model.dart';
+import 'package:smart_admin_dashboard/models/user_model.dart';
 import 'package:smart_admin_dashboard/services/firebase_service.dart';
 
 class RecentUsers extends StatefulWidget {
